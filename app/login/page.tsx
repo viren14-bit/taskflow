@@ -42,6 +42,8 @@ export default function Login() {
         })
       }
     } catch (error) {
+      console.log("Error: ", error);
+      
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",

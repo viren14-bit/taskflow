@@ -11,10 +11,17 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import type { Project } from "@/components/task-dashboard"
 
+type NewProject = {
+  name: string
+  description: string
+  color: string
+}
+
 interface ProjectFormProps {
-  onSubmit: (project: Omit<Project, "id" | "userId" | "createdAt">) => void
+  onSubmit: (project: NewProject) => void
   onClose: () => void
 }
+
 
 const colors = [
   { name: "Blue", value: "blue" },

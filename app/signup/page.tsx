@@ -63,6 +63,8 @@ export default function SignUp() {
         })
       }
     } catch (error) {
+      console.log("Error: ", error);
+
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
